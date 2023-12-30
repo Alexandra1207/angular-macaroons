@@ -1,0 +1,67 @@
+.footer {
+  padding: 70px 0 62px;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-areas: "logo instagram number" "rights instagram number";
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  grid-area: logo;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.rights {
+  grid-area: rights;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.instagram {
+  grid-area: instagram;
+  text-align: center;
+  text-decoration: none;
+}
+
+.instagram__img {
+  margin-bottom: 10px;
+}
+
+.instagram__text {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.footer__tel {
+  grid-area: number;
+}
+
+@media screen and (max-width: 568px) {
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footer__logo {
+    margin-bottom: 32px;
+  }
+
+  .footer__tel {
+    margin-bottom: 40px;
+  }
+
+  .instagram {
+    margin-bottom: 34px;
+  }
+
+  .footer__container {
+    grid-template-areas: "logo" "number" "instagram" "rights";
+    justify-content: center;
+    text-align: center;
+  }
+}

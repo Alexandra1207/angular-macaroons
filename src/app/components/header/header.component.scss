@@ -1,0 +1,141 @@
+.header {
+  padding: 34px 0 22px;
+}
+
+
+.header__container {
+  display: flex;
+  align-items: center;
+
+}
+
+.header__logo {
+  margin-right: 230px;
+}
+
+.header__menu {
+  margin-right: 325px;
+}
+
+.menu__list {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+}
+
+.menu__link {
+  border-bottom: 2px solid transparent;
+}
+
+.menu__link {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(119, 11, 29);
+  text-decoration: none;
+  padding-bottom: 3px;
+  transition: all 1s;
+}
+
+.menu__item:hover .menu__link {
+  border-bottom: 2px solid #821328;
+}
+
+.burger,
+.close {
+  display: none;
+}
+
+@media screen and  (max-width: 1169px) {
+  .header__container {
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .header__menu {
+    margin-right: 0;
+  }
+}
+
+@media screen and  (max-width: 769px) {
+  .header__tel {
+    display: none;
+  }
+
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .header__logo {
+    margin-right: 103px;
+  }
+}
+
+@media screen and  (max-width: 700px) {
+  .header__container {
+    justify-content: space-between;
+  }
+}
+
+@media screen and  (max-width: 568px) {
+  .header {
+    padding: 36px 0;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+
+  .burger svg {
+    width: 40px;
+    height: 22px;
+  }
+
+  .burger svg rect {
+    fill: #821328;
+  }
+
+  .close {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: #821328;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(235, 168, 177, .9);
+    height: 100%;
+    z-index: 10;
+  }
+
+  .menu.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu__link {
+    font-size: 20px;
+  }
+}
