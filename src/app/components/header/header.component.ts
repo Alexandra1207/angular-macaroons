@@ -8,11 +8,9 @@ import { CommonVariablesService } from "../../common-variables.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  phoneNumber: string;
+  phoneNumber: string = '';
 
   constructor(public commonVariablesService: CommonVariablesService, private elementRef: ElementRef) {
-    this.phoneNumber = this.commonVariablesService.phoneNumber;
-
   }
   scrollTo(targetId: string) {
     const targetElement = this.elementRef.nativeElement.ownerDocument.getElementById(targetId);
@@ -20,20 +18,17 @@ export class HeaderComponent implements OnInit {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
-
-  }
-
-  isMenuOpen = false;
-
-  openMenu() {
-    this.isMenuOpen = true;
-  }
-
-  closeMenu() {
     this.isMenuOpen = false;
   }
 
+  isMenuOpen: boolean = false;
+
+  activeMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   ngOnInit(): void {
+    this.phoneNumber = this.commonVariablesService.phoneNumber;
   }
 
 }

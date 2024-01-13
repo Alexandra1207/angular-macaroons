@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ProductType} from "./types/product.type";
 import {AdvantageType} from "./types/advantage.type";
+import {FormValuesType} from "./types/form-values.type";
 
 @Component({
   selector: 'app-root',
@@ -49,7 +50,7 @@ public products: ProductType[] = [
   }
 ];
 
-public formValues = {
+public formValues: FormValuesType = {
   productTitle: '',
   name: '',
   phone: ''
@@ -64,8 +65,7 @@ public addToCard(product: ProductType, target: HTMLElement): void {
   this.formValues.productTitle = product.title.toUpperCase();
 }
 
-public createOrder()
-{
+public createOrder(): void {
   if (!this.formValues.productTitle) {
     alert('Выберите продукт');
     return;

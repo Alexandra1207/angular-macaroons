@@ -5,7 +5,7 @@
     </a>
     <nav class="menu header__menu" id="menu" [ngClass]="{'open': isMenuOpen}">
 
-      <div class="close" (click)="closeMenu()">
+      <div class="close" (click)="activeMenu()">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
@@ -24,18 +24,18 @@
       </div>
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="#" class="menu__link"  (click)="scrollTo('products'); closeMenu()">Пироженки</a>
+          <a href="#" class="menu__link"  (click)="scrollTo('products')">Пироженки</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__link" (click)="scrollTo('about'); closeMenu()">О нас</a>
+          <a href="#" class="menu__link" (click)="scrollTo('about')">О нас</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__link" (click)="scrollTo('order'); closeMenu()">Оформить заказ</a>
+          <a href="#" class="menu__link" (click)="scrollTo('order')">Оформить заказ</a>
         </li>
       </ul>
     </nav>
     <a href="tel:+375(29)368-98-68" class="tel header__tel">{{phoneNumber}}</a>
-    <div class="burger" id="burger" (click)="isMenuOpen ? closeMenu() : openMenu()">
+    <div class="burger" id="burger" (click)="activeMenu()">
       <svg width="40px" height="22px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" id="Слой_1"
            version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
            xmlns:xlink="http://www.w3.org/1999/xlink">
