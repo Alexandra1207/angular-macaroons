@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {CommonVariablesService} from "../../common-variables.service";
 
 @Component({
   selector: 'footer-component',
@@ -8,12 +7,8 @@ import {CommonVariablesService} from "../../common-variables.service";
 })
 export class FooterComponent implements OnInit {
 
-  phoneNumber: string;
   linkInstagram: string = 'https://www.google.com/'
 
-  constructor(public commonVariablesService: CommonVariablesService) {
-    this.phoneNumber = this.commonVariablesService.phoneNumber;
-  }
 
   ngOnInit(): void {
   }

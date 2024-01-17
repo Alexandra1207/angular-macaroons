@@ -1,0 +1,13 @@
+<div class="advantages__item">
+  <div class="advantages__number">
+    <span class="advantages__num">
+      <ng-content></ng-content>
+    </span>
+  </div>
+  <h3 class="advantages__item-title">
+    {{advantage.title}}
+  </h3>
+  <div class="advantages__item-text">
+    {{advantage.text | cutText}}
+  </div>
+</div>

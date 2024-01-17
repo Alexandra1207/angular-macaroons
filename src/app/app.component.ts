@@ -1,12 +1,14 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductType} from "./types/product.type";
 import {AdvantageType} from "./types/advantage.type";
 import {FormValuesType} from "./types/form-values.type";
+import {ProductService} from "./services/product.service";
+import {CartService} from "./services/cart.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   public advantages: AdvantageType[] = [
@@ -27,33 +29,19 @@ export class AppComponent {
       text: 'Вкус, качество и безопасность наших пирогов подтверждена декларацией о соответствии, которую мы получили 22.06.2016 г.'
     }
   ];
-public products: ProductType[] = [
-  {
-    image: '1.png',
-    title: 'Макарун с малиной',
-    price: '1,70 руб.'
-  },
-  {
-    image: '2.png',
-    title: 'Макарун с манго',
-    price: '1,70 руб.'
-  },
-  {
-    image: '3.png',
-    title: 'Пирог с ванилью',
-    price: '1,70 руб.'
-  },
-  {
-    image: '4.png',
-    title: 'Пирог с фисташками',
-    price: '1,70 руб.'
-  }
-];
+public products: ProductType[] = [];
 
 public formValues: FormValuesType = {
   productTitle: '',
   name: '',
   phone: ''
+}
+
+constructor(public productService: ProductService, public cartService: CartService) {
+}
+
+ngOnInit() {
+  this.products = this.productService.getProducts();
 }
 
 public scrollTo(target: HTMLElement): void {
@@ -63,6 +51,9 @@ public scrollTo(target: HTMLElement): void {
 public addToCard(product: ProductType, target: HTMLElement): void {
   this.scrollTo(target);
   this.formValues.productTitle = product.title.toUpperCase();
+  this.cartService.count++;
+  this.cartService.sum += product.price;
+  alert(product.title + ' добавлен в корзину!');
 }
 
 public createOrder(): void {
@@ -79,7 +70,6 @@ public createOrder(): void {
     return;
   }
 
-  //ajax
   alert('Спасибо за заказ');
   this.formValues = {
     productTitle: '',

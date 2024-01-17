@@ -43,6 +43,15 @@ body {
   margin: 0 auto;
 }
 
+.btn {
+  cursor: pointer;
+  border: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
 
 .tel {
   font-size: 16px;

@@ -6,7 +6,13 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PresentComponent } from './components/present/present.component';
+import { ProductComponent } from './components/product/product.component';
+import { AdvantageComponent } from './components/advantage/advantage.component';
+import { BtnStylesDirective } from './directives/btn-styles.directive';
+import {CutTextPipe} from "./pipes/cut-text.pipe";
+import { PhoneFormatPipe } from './pipes/phone-format.pipe';
+import {ProductService} from "./services/product.service";
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -14,14 +20,19 @@ import { PresentComponent } from './components/present/present.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PresentComponent,
+    ProductComponent,
+    AdvantageComponent,
+    BtnStylesDirective,
+    CutTextPipe,
+    PhoneFormatPipe,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent, HeaderComponent, FooterComponent, PresentComponent]
+  providers: [ProductService],
+  bootstrap: [AppComponent, HeaderComponent, FooterComponent, CartComponent]
 })
 export class AppModule { }

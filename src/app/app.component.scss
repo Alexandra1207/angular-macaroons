@@ -30,21 +30,6 @@
   margin-bottom: 85px;
 }
 
-.btn {
-  cursor: pointer;
-  border: none;
-  color: rgb(255, 255, 255);
-  transition: all 0.3s;
-  font-weight: bold;
-  box-sizing: border-box;
-  background: linear-gradient(#d7485c, #71081e);
-}
-
-.btn:hover {
-  box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
-
-}
-
 .main__btn {
   width: 240px;
   height: 60px;
@@ -129,48 +114,6 @@
   max-width: 400px;
 }
 
-
-.advantages__number {
-  position: relative;
-  border-radius: 50%;
-  background-color: rgb(130, 19, 40);
-  width: 70px;
-  height: 70px;
-  font-size: 60px;
-  color: rgb(255, 255, 255);
-  line-height: 0.75;
-  font-weight: 800;
-  margin-bottom: 9px;
-  transition: all 1s;
-}
-
-.advantages__item:hover .advantages__number {
-  background-color: #eba8b1;
-  color: rgb(130, 19, 40);
-}
-
-
-.advantages__num {
-  position: absolute;
-  bottom: -3px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.advantages__item-title {
-  font-size: 20px;
-  color: rgb(51, 25, 7);
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.advantages__item-text {
-  font-size: 15px;
-  font-weight: 500;
-  color: rgb(51, 25, 7);
-  line-height: 1.333;
-}
-
 .products {
   padding: 120px 0;
 }
@@ -187,58 +130,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 138px 29px;
-}
-
-.product {
-  border: 2px solid #fff;
-  border-radius: 20px;
-  padding: 25px 20px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.product__image {
-  height: 80px;
-  width: 192px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.product__img {
-  position: absolute;
-  top: -83px;
-  left: 0;
-  transition: all 0.5s;
-}
-
-.product:hover .product__img {
-  transform: scale(1.1);
-}
-
-.product__title {
-  font-size: 18px;
-  font-family: Tavolga, sans-serif;
-  color: rgb(255, 255, 255);
-  margin-bottom: 25px;
-}
-
-.product__action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.product__price {
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-  line-height: 24px;
-  text-align: left;
-}
-
-.product__btn {
-  width: 130px;
-  height: 50px;
-  border-radius: 25px;
 }
 
 .order {
@@ -405,26 +296,9 @@
     grid-gap: 50px;
   }
 
-  .advantages__item {
-    text-align: center;
-  }
-
-  .advantages__number {
-    margin: 0 auto 9px;
-  }
-
-  .advantages__item-text {
-    max-width: 278px;
-    margin: 0 auto;
-  }
-
   .products__items {
     grid-template-columns: repeat(2, 263px);
     justify-content: center;
-  }
-
-  .product {
-    width: 263px;
   }
 
   .strawberry2 {
@@ -499,14 +373,6 @@
     margin-bottom: 50px;
   }
 
-  .advantages__item {
-    max-width: 210px;
-    margin: auto;
-  }
-
-  .advantages__item-text {
-    margin-bottom: 35px;
-  }
 
   .order {
     padding-top: 110px;
@@ -659,22 +525,6 @@
     padding: 20px 0 30px;
   }
 
-  .advantages__item {
-    margin-top: 0;
-  }
-
-  .advantages__item-title {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 18px;
-  }
-
-  .advantages__item-text {
-    font-size: 13px;
-    line-height: 1.385;
-    margin-bottom: 0;
-  }
-
   .products {
     padding: 90px 0 100px;
   }
@@ -688,10 +538,6 @@
   .products__items {
     grid-template-columns: fit-content(263px);
     justify-content: center;
-  }
-
-  .product__btn {
-    font-size: 16px;
   }
 
   .order {

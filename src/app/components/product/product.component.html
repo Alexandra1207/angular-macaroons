@@ -1,0 +1,17 @@
+<div class="product">
+  <div class="product__image">
+    <img class="product__img" src="../assets/images/products/{{product.image}}" alt="фото пироженного">
+  </div>
+  <h3 class="product__title">
+    {{product.title}}
+  </h3>
+  <div class="product__action">
+    <div class="product__price">
+      <div>1 шт.</div>
+      <div>{{product.price | currency:'руб.':'symbol':'1.2-2'}}</div>
+    </div>
+    <button class="btn product__btn" btnStyles (click)="addProductToCard()">Заказать</button>
+  </div>
+</div>
+
+

@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CommonVariablesService {
-  phoneNumber: string = "+375 (29) 368-98-68";
+export class CartService {
+  count: number = 0;
+  sum: number = 0
+
   constructor() { }
 }

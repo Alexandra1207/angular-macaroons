@@ -1,5 +1,4 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { CommonVariablesService } from "../../common-variables.service";
 
 
 @Component({
@@ -8,9 +7,8 @@ import { CommonVariablesService } from "../../common-variables.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  phoneNumber: string = '';
 
-  constructor(public commonVariablesService: CommonVariablesService, private elementRef: ElementRef) {
+  constructor(private elementRef: ElementRef) {
   }
   scrollTo(targetId: string) {
     const targetElement = this.elementRef.nativeElement.ownerDocument.getElementById(targetId);
@@ -28,7 +26,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.phoneNumber = this.commonVariablesService.phoneNumber;
   }
 
 }
